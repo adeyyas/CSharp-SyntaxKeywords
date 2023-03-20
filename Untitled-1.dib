@@ -1,0 +1,657 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"languageName":"csharp","name":"csharp"}]}}
+
+#!markdown
+
+# C# SYNTAX METHODS
+
+#!markdown
+
+C# is case-sensitive: "MyClass" and "myclass" has different meaning.		
+
+<span style="color:cyan">Note: Every C# statement ends with a semicolon ;</span>
+
+#!markdown
+
+```c#
+"Console.Writeline()"
+``` Description;To output values or print text in on lineC#
+```c#
+"Console.Write()" 
+```    Description;To output values or print text in C#
+
+#!csharp
+
+Console.WriteLine("Hello Word");
+Console.Write("Hello");
+Console.Write("World!");
+
+#!markdown
+
+```c#
+//Comment
+```
+Any text between // and the end of the line is ignored by C# (will not be executed).
+
+```c#
+/* and ends
+ with */
+```
+Multi-line comments start with /* and ends with */
+
+#!markdown
+
+#### C# VARIABLES
+Variables are containers for storing data values.
+
+#!markdown
+
+```c# integer
+int myNum = 10;
+```
+The  ***int*** data type can store whole numbers from *-2147483648* to *2147483647*. 
+Memory Size: 4 Bytes.
+
+```c# long
+long myNum = 15000000000L;
+```
+The ***long*** data type can store whole numbers from *-9223372036854775808*  to *9223372036854775807*.	
+Memory Size: 8 Bytes. 	
+
+```c# float
+float myNum = 5.75F;
+```
+You should use a ***floating*** point type whenever you need a number with a decimal.
+ Memory Size: 4 Bytes.		
+
+```c# double
+double myNum = 19.99D;
+```		
+The ***float and double*** data types can store fractional numbers. Note that you should end the value with an "F" for floats and "D" for doubles. 
+Memory Size: 8 Bytes.
+
+```c# char
+char myGrade = 'B';
+```
+The ***char*** data type is used to store a single character. The character must be surrounded by single quotes, like 'A' or 'c':
+Memory Size: 2 Bytes.			
+
+```c# bool
+ bool isCSharpFun = true;
+```
+A ***boolean*** data type is declared with the bool keyword and can only take the values ***true or false***.	
+Memory Size: 1 bit (0.125bytes) (1byte=8bit)	 		
+
+```c# string
+string greeting = "Hello World";
+```
+The ***string*** data type is used to store a sequence of characters (text). String values must be surrounded by double quotes:	
+Memory Size: 2 bytes per character		
+
+#!markdown
+
+#### C# TYPE CASTING
+Type casting is when you assign a value of one data type to another type.
+In C#, there are two types of casting:	
+
+#!markdown
+
+"***Implicit Casting*** (automatically) - converting a smaller type to a larger type size
+char -> int -> long -> float -> double"	
+
+Example; 	
+
+#!csharp
+
+int myInt = 9;
+double myDouble = myInt;       // Automatic casting: int to double
+Console.WriteLine(myInt);      // Outputs 9
+Console.WriteLine(myDouble);   // Outputs 9"	
+
+#!markdown
+
+"***Explicit Casting*** (manually) - converting a larger type to a smaller size type
+```c#
+double -> float -> long -> int -> char
+Example;	
+
+#!csharp
+
+double myDouble = 9.78;
+int myInt = (int) myDouble;    // Manual casting: double to int
+Console.WriteLine(myDouble);   // Outputs 9.78
+Console.WriteLine(myInt);      // Outputs 9
+
+#!markdown
+
+Type casting is when you assign a value of one data type to another type.
+It is also possible to convert data types explicitly by using built-in methods, such as Convert.ToBoolean, Convert.ToDouble, Convert.ToString, Convert.ToInt32 (int) and Convert.ToInt64 (long):
+
+#!csharp
+
+int myInt = 10;
+double myDouble = 5.25;
+bool myBool = true;
+Console.WriteLine(Convert.ToString(myInt));    // convert int to string 
+Console.WriteLine(Convert.ToDouble(myInt));    // convert int to double
+Console.WriteLine(Convert.ToInt32(myDouble));  // convert double to int
+Console.WriteLine(Convert.ToString(myBool));   // convert bool to string"
+Console.WriteLine(myInt.GetType());
+Console.WriteLine(myInt.GetType());
+Console.WriteLine(myDouble.GetType());
+Console.WriteLine(myBool.GetType());
+
+#!markdown
+
+#### C# Operators
+C# provides a number of operators. Many of them are supported by the built-in types and allow you to perform basic operations with values of those types
+
+#!csharp
+
+// int x = 3, y = 5;
+
+// x + y;    // "+" Addition: Adds together two values
+// x - y;    // "-" Subtraction: Subtracts one value from another
+// x * y;    // "*" Multiplication: Multiplies two values
+// x / y;    // "/" Division: Divides one value by another
+// x % y;    // "%" Modulus: Returns the division remainder
+// x++;      // "++" Increment: Increases the value of a variable by 1
+// x--;      // "--" Decrement: Decreases the value of a variable by 1
+// x = 5;    // "=" Assignment: Assigns a value to a variable
+// x += 3;   // "+=" Addition assignment: Adds a value to a variable and assigns the result to the variable
+// x -= 3;   // "-=" Subtraction assignment: Subtracts a value from a variable and assigns the result to the variable
+// x *= 3;   // "*=" Multiplication assignment: Multiplies a variable by a value and assigns the result to the variable
+// x /= 3;   // "/=" Division assignment: Divides a variable by a value and assigns the result to the variable
+// x %= 3;   // "%=" Modulus assignment: Performs modulus on a variable and a value, and assigns the result to the variable
+// x &= 3;   // "&=" Bitwise AND assignment: Performs bitwise AND on a variable and a value, and assigns the result to the variable
+// x |= 3;   // "|=" Bitwise OR assignment: Performs bitwise OR on a variable and a value, and assigns the result to the variable
+// x ^= 3;   // "^=" Bitwise XOR assignment: Performs bitwise XOR on a variable and a value, and assigns the result to the variable
+// x >>= 3;  // ">>=" Right shift assignment: Performs right shift on a variable and a value, and assigns the result to the variable
+// x <<= 3;  // "<<=" Left shift assignment: Performs left shift on a variable and a value, and assigns the result to the variable
+// x == y;   // "==" Equality: Compares two values for equality
+// x != y;   // "!=" Inequality: Compares two values for inequality
+// x > y;    // ">" Greater than: Checks if one value is greater than another
+// x >= y;   // ">=" Greater than or equal to: Checks if one value is greater than or equal to another
+// x < y;    // "<" Less than: Checks if one value is less than another
+// x <= y;   // "<=" Less than or equal to: Checks if one value is less than or equal to another
+// x < 5 && x < 10;  // "&&" Logical AND: Checks if two conditions are true
+// x < 5 || x < 4;   // "||" Logical OR: Checks if one or both of two conditions are true
+// !(x < 5 && x < 10); // "!" Logical NOT: Inverts the value of a Boolean expression0
+
+#!markdown
+
+#### C# Math								
+Provides constants and static pulse for trigonometric, logarithmic and other common gears.
+
+#!markdown
+
+Math.Max(x,y);
+
+Math.Max(x,y) method can be used to find the highest value of x and y:		
+
+#!csharp
+
+// Define variables x and y
+int x = 5;
+int y = 10;
+
+// Use the Math.Max() method to find the maximum value between x and y
+int max = Math.Max(x, y);
+
+// Print the maximum value to the console
+Console.WriteLine(max); //output to 10.
+
+#!markdown
+
+Math.Min(x,y);
+
+Math.Min(x,y) method can be used to find the lowest value of of x and y:
+
+#!csharp
+
+// Define variables x and y
+int x = 5;
+int y = 10;
+
+// Use the Math.Min() method to find the minimum value between x and y
+int min = Math.Min(x, y);
+
+// Print the minimum value to the console
+Console.WriteLine(min); //output to 5.
+
+#!markdown
+
+Math.Sqrt(x);
+
+Math.Sqrt(x) method returns the square root of x:			
+
+#!csharp
+
+//Define a veriable x
+double x=64;
+//Use the Math.Sqrt() method to find the square root of x
+double squareroot=Math.Sqrt(x);
+//Print the square root of x
+Console.WriteLine(squareroot); //output to 8.
+
+#!markdown
+
+Math.Abs(x);
+
+Math.Abs(x) method returns the absolute (positive) value of x:
+
+#!csharp
+
+double x = -4.7;
+        double absoluteValue = Math.Abs(x);
+
+        Console.WriteLine("The absolute value of {0} is {1}", x, absoluteValue); //-4.7 output to 4.7
+
+#!markdown
+
+Math.Round();
+
+Math.Round() rounds a number to the nearest whole number:
+
+#!csharp
+
+double number = 9.99;
+        Console.WriteLine(Math.Round(number)); //output to 10
+
+#!markdown
+
+#### C# Strings
+
+In C#, strings are represented by the string data type. Strings in C# are immutable, which means that once a string object is created, its value cannot be changed. However, you can create a new string based on an existing string by performing operations on it.
+
+#!markdown
+
+String;
+Create a variable of type string and assign it a value
+
+#!csharp
+
+string x="cSharpIsFun";
+Console.WriteLine(x); //output to cSharpIsFun
+
+#!markdown
+
+Length;
+the length of a string can be found with the Length property.
+
+#!csharp
+
+string txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+Console.WriteLine("The length of the txt string is: " + txt.Length); //output to 26 
+
+#!markdown
+
+ToUpper(); returns a copy of the string converted to uppercase or lowercase:
+
+#!csharp
+
+string txt = "Hello World";
+Console.WriteLine(txt.ToUpper());  // Outputs "HELLO WORLD"
+
+#!markdown
+
+ToLower(); returns a copy of the string converted to uppercase or lowercase:
+
+#!csharp
+
+string txt = "Hello World"; 
+Console.WriteLine(txt.ToLower());// Outputs "hello world"
+
+#!markdown
+
+(+)operator; 
+The + operator can be used between strings to combine them			
+
+#!csharp
+
+string firstName = "Hello";
+string lastName = "World";
+string name = firstName +" "+ lastName; //There is a space character in " "
+Console.WriteLine(name); // output: firstName + " " + Lastname
+
+#!csharp
+
+string x = "10";
+string y = "20";
+string z = x + y;  // z will be 1020 (a string)
+Console.WriteLine(z)
+
+#!markdown
+
+string.Concat();
+
+You can also use the string.Concat() method to concatenate two strings:
+
+#!csharp
+
+string firstName ="hello", lastName="world";
+string name = string.Concat(firstName, lastName);
+Console.WriteLine(name); //output to helloworld
+
+#!markdown
+
+String Interpolation; 
+string interpolation, which substitutes values of variables into placeholders in a string.
+
+```c#
+//{<interpolationExpression>[,<alignment>][:<formatString>]}
+```
+
+#!csharp
+
+string firstName = "John";
+string lastName = "Doe";
+string name = $"My full name is: {firstName} {lastName}";
+Console.WriteLine(name); //My full name is: John Doe
+
+#!markdown
+
+Access Strings; 
+can access the characters in a string by referring to its index number inside square brackets []			
+
+#!csharp
+
+string myString = "Hello";
+Console.WriteLine(myString[0]);
+  // Outputs "H"
+
+#!markdown
+
+ IndexOf();		
+can also find the index position of a specific character in a string, by using the IndexOf()
+
+#!csharp
+
+string myString = "Hello";
+Console.WriteLine(myString.IndexOf("e"));  
+// Outputs "1"
+
+#!markdown
+
+Substring(); 
+which extracts the characters from a string, starting from the specified character position/index, and returns a new string. This method is often used together with IndexOf() to get the specific character position
+
+#!csharp
+
+string str = "Hello World"; // declare a string variable and assign it the value "Hello World"
+string substr = str.Substring(0, 5); // extract the substring that starts at index 0 and is 5 characters long
+Console.WriteLine(substr); // print the extracted substring to the console
+
+#!markdown
+
+#### C# Special Characters
+
+#!markdown
+
+```c#
+'		\'			Single quote	
+
+"		\"			Double quote		
+
+\\		\			Backslash 		
+
+                 \n			New Line	
+				
+                 \t			Tab			
+
+```
+
+#!markdown
+
+#### C# Booleans 
+
+ C# has a bool data type, which can take the values true or false.
+ 
+
+#!markdown
+
+A Boolean expression returns a boolean value: True or False, by comparing values/variables.
+
+This is useful to build logic, and find answers.
+
+For example, you can use a comparison operator, such as the greater than (>) operator to find out if an expression (or a variable) is true:
+
+Example;
+
+#!csharp
+
+int x = 10;
+int y = 9;
+Console.WriteLine(x > y); // returns True, because 10 is higher than 9
+//output to true
+
+#!markdown
+
+#### C# Conditions and If Statements 
+###### IF/ELSE/ELSE IF/ TERNARY
+
+#!markdown
+
+C# supports the usual logical conditions from mathematics:
+
+-Less than: a < b
+
+-Less than or equal to: a <= b
+
+-Greater than: a > b
+
+-Greater than or equal to: a >= b
+
+-Equal to a == b
+
+-Not Equal to: a != b
+
+-You can use these conditions to perform different actions for different decisions.
+
+C# has the following conditional statements:
+
+-Use if to specify a block of code to be executed, if a specified condition is true
+
+-Use else to specify a block of code to be executed, if the same condition is false
+
+-Use else if to specify a new condition to test, if the first condition is false
+
+-Use switch to specify many alternative blocks of code to be executed
+
+#!markdown
+
+***If - Else If - Else Example;***
+
+#!csharp
+
+int time = 22;
+if (time < 10) 
+{
+  Console.WriteLine("Good morning.");
+} 
+else if (time < 20) 
+{
+  Console.WriteLine("Good day.");
+} 
+else 
+{
+  Console.WriteLine("Good evening.");
+}
+// Outputs "Good evening."
+
+#!markdown
+
+***Short Hand If...Else (Ternary Operator)***
+
+There is also a short-hand if else, which is known as the ternary operator because it consists of three operands. It can be used to replace multiple lines of code with a single line. It is often used to replace simple if else statements:
+
+#!markdown
+
+variable = (condition) ? expressionTrue :  expressionFalse;
+
+#!csharp
+
+int time = 20;
+string result = (time < 18) ? "Good day." : "Good evening.";
+Console.WriteLine(result);
+
+#!markdown
+
+#### C# Switch Statements
+
+Use the switch statement to select one of many code blocks to be executed.
+
+#!markdown
+
+This is how it works:
+
+    The switch expression is evaluated once
+
+    The value of the expression is compared with the values of each case
+
+    If there is a match, the associated block of code is executed
+
+    The break and default keywords will be described later in this chapter
+
+#!csharp
+
+//Example;
+int day = 4;
+switch (day) 
+{
+  case 1:
+    Console.WriteLine("Monday");
+    break;
+  case 2:
+    Console.WriteLine("Tuesday");
+    break;
+  case 3:
+    Console.WriteLine("Wednesday");
+    break;
+  case 4:
+    Console.WriteLine("Thursday");
+    break;
+  case 5:
+    Console.WriteLine("Friday");
+    break;
+  case 6:
+    Console.WriteLine("Saturday");
+    break;
+  case 7:
+    Console.WriteLine("Sunday");
+    break;
+}
+// Outputs "Thursday" (day 4)
+
+#!markdown
+
+***The Break Keyword***
+
+When C# reaches a break keyword, it breaks out of the switch block.
+
+This will stop the execution of more code and case testing inside the block.
+
+#!markdown
+
+***The Default Keyword***
+
+The default keyword is optional and specifies some code to run if there is no case match
+
+#!csharp
+
+//Example; 
+int day = 4;
+switch (day) 
+{
+  case 6:
+    Console.WriteLine("Today is Saturday.");
+    break;
+  case 7:
+    Console.WriteLine("Today is Sunday.");
+    break;
+  default:
+    Console.WriteLine("Looking forward to the Weekend.");
+    break;
+}
+// Outputs "Looking forward to the Weekend."
+
+#!markdown
+
+#### C# While Loop 
+
+The while loop loops through a block of code as long as a specified condition is True
+
+#!markdown
+
+```c#
+while (condition) 
+{
+  // code block to be executed
+}
+```
+
+#!markdown
+
+In the example below, the code in the loop will run, over and over again, as long as a variable (i) is less than 5:
+
+#!csharp
+
+int i = 0;
+while (i < 5) 
+{
+  Console.WriteLine(i);
+  i++;
+}
+
+#!markdown
+
+***Note: Do not forget to increase the variable used in the condition, otherwise the loop will never end!***
+
+#!markdown
+
+##### C# The Do/While Loop
+The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+
+#!markdown
+
+Syntax;
+```c#
+do 
+{
+  // code block to be executed
+}
+while (condition);
+```
+
+#!csharp
+
+//Example;
+int i = 0;
+do 
+{
+  Console.WriteLine(i);
+  i++;
+}
+while (i < 5);
+
+#!markdown
+
+#### C# For Loop 
+When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop
+
+#!markdown
+
+Syntax;
+```c#
+for (initial value; condition; increment/decrement) {
+  // code to be executed
+}
+```
+
+#!csharp
+
+// Example;
+for (int i = 1; i <= 10; i++) {
+  Console.WriteLine(i);
+} //outputs to 1,2,3...9,10

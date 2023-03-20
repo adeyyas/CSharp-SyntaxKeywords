@@ -655,3 +655,350 @@ for (initial value; condition; increment/decrement) {
 for (int i = 1; i <= 10; i++) {
   Console.WriteLine(i);
 } //outputs to 1,2,3...9,10
+
+#!markdown
+
+##### ***Nested Loops***
+It is also possible to place a loop inside another loop. This is called a nested loop.
+
+The "inner loop" will be executed one time for each iteration of the "outer loop"
+
+#!csharp
+
+//Example;
+// Outer loop
+for (int i = 1; i <= 2; ++i) 
+{
+  Console.WriteLine("Outer: " + i);  // Executes 2 times
+  
+  // Inner loop
+  for (int j = 1; j <= 3; j++) 
+  {
+    Console.WriteLine(" Inner: " + j); // Executes 6 times (2 * 3)
+  }
+}
+
+#!markdown
+
+#### C# Foreach Loop 
+
+There is also a foreach loop, which is used exclusively to loop through elements in an array
+
+#!markdown
+
+Syntax; 
+```c#
+foreach (type variableName in arrayName) 
+{
+  // code block to be executed
+}
+```
+
+#!csharp
+
+//Example;
+string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+foreach (string i in cars) 
+{
+  Console.WriteLine(i);
+}
+
+#!markdown
+
+#### C# Break and Continue
+
+***Break***
+The break statement can also be used to jump out of a loop.
+
+#!csharp
+
+//Example;
+for (int i = 0; i < 10; i++) 
+{
+  if (i == 4) 
+  {
+    break;
+  }
+  Console.WriteLine(i);
+} //for output 10 but break outputed to 4 
+
+#!markdown
+
+***Continue***
+
+The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
+
+#!csharp
+
+//Example;
+for (int i = 0; i < 10; i++) 
+{
+  if (i == 4) 
+  {
+    continue;
+  }
+  Console.WriteLine(i);
+}
+
+#!markdown
+
+***Break and Continue in While Loop***
+
+You can also use break and continue in while loops
+
+#!csharp
+
+//break Example;
+int i = 0;
+while (i < 10) 
+{
+  Console.WriteLine(i);
+  i++;
+  if (i == 4) 
+  {
+    break;
+  }
+}
+
+#!csharp
+
+//continue Example;
+int i = 0;
+while (i < 10) 
+{
+  if (i == 4) 
+  {
+    i++;
+    continue;
+  }
+  Console.WriteLine(i);
+  i++;
+}
+
+#!markdown
+
+#### C# Arrays
+Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+
+To declare an array, define the variable type with square brackets:
+
+#!csharp
+
+// To insert values to it, we can use an array literal - place the values in a comma-separated list, inside curly braces:
+
+string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+Console.WriteLine(cars[1]);
+
+#!csharp
+
+// To create an array of integers, you could write:
+int[] myNum = {10, 20, 30, 40};
+Console.WriteLine(myNum[3]);
+
+#!markdown
+
+***Note: Array indexes start with 0: [0] is the first element. [1] is the second element, etc.***
+
+#!markdown
+
+##### Change an Array Element
+To change the value of a specific element, refer to the index number:
+
+#!csharp
+
+string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+cars[0] = "Opel";
+Console.WriteLine(cars[0]);
+// Now outputs Opel instead of Volvo
+
+#!markdown
+
+##### Array Length
+To find out how many elements an array has, use the Length property:
+
+#!csharp
+
+string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+Console.WriteLine(cars.Length);
+// Outputs 4
+
+#!markdown
+
+#### C# Loop Through Arrays
+
+##### Loop Through an Array
+You can loop through the array elements with the for loop, and use the Length property to specify how many times the loop should run.
+
+#!csharp
+
+//Example;
+string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for (int i = 0; i < cars.Length; i++) 
+{
+  Console.WriteLine(cars[i]);
+}
+
+#!markdown
+
+##### The Foreach Loop
+There is also a foreach loop, which is used exclusively to loop through elements in an array:
+
+Syntax;
+```c#
+foreach (type variableName in arrayName) 
+{
+  // code block to be executed
+}
+```
+
+#!csharp
+
+//Example;
+string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+foreach (string i in cars) 
+{
+  Console.WriteLine(i);
+}
+
+#!markdown
+
+The example above can be read like this: for each string element (called i - as in index) in cars, print out the value of i.
+
+If you compare the for loop and foreach loop, you will see that the foreach method is easier to write, it does not require a counter (using the Length property), and it is more readable.
+
+#!markdown
+
+#### C# Sort Arrays
+
+There are many array methods available, for example Sort(), which sorts an array alphabetically or in an ascending order:
+
+#!csharp
+
+// Sort a string
+string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+Array.Sort(cars);
+foreach (string i in cars)
+{
+  Console.WriteLine(i);
+}
+
+#!csharp
+
+// Sort an int
+int[] myNumbers = {5, 1, 8, 9};
+Array.Sort(myNumbers);
+foreach (int i in myNumbers)
+{
+  Console.WriteLine(i);
+}
+
+#!markdown
+
+#### System.Linq Namespace
+Other useful array methods, such as Min, Max, and Sum, can be found in the System.Linq namespace
+
+#!csharp
+
+      int[] myNumbers = {5, 1, 8, 9};
+      Console.WriteLine(myNumbers.Max());  // returns the largest value
+      Console.WriteLine(myNumbers.Min());  // returns the smallest value
+      Console.WriteLine(myNumbers.Sum());  // returns the sum of elements
+
+#!markdown
+
+#### C# Multidimensional Arrays
+
+##### Multidimensional Arrays
+In the previous chapter, you learned about arrays, which is also known as single dimension arrays. These are great, and something you will use a lot while programming in C#. However, if you want to store data as a tabular form, like a table with rows and columns, you need to get familiar with multidimensional arrays.
+
+A multidimensional array is basically an array of arrays.
+
+Arrays can have any number of dimensions. The most common are two-dimensional arrays (2D).
+
+#!markdown
+
+##### Two-Dimensional Arrays
+
+To create a 2D array, add each array within its own set of curly braces, and insert a comma (,) inside the square brackets:
+```c#
+//Example
+int[,] numbers = { {1, 4, 2}, {3, 6, 8} };
+```
+
+#!markdown
+
+***Good to know: The single comma [,] specifies that the array is two-dimensional. A three-dimensional array would have two commas: int[,,].***
+
+#!markdown
+
+numbers is now an array with two arrays as its elements. The first array element contains three elements: 1, 4 and 2, while the second array element contains 3, 6 and 8. To visualize it, think of the array as a table with rows and columns:
+
+#!markdown
+
+![Alt text](https://www.w3schools.com/c/col-row.png)
+
+#!markdown
+
+#### Access Elements of a 2D Array
+To access an element of a two-dimensional array, you must specify two indexes: one for the array, and one for the element inside that array. Or better yet, with the table visualization in mind; one for the row and one for the column (see example below).
+
+This statement accesses the value of the element in the first row (0) and third column (2) of the numbers array:
+
+#!csharp
+
+//Example;
+int[,] numbers = { {1, 4, 2}, {3, 6, 8} };
+Console.WriteLine(numbers[0, 2]);  // Outputs 2
+
+#!markdown
+
+***Remember that: Array indexes start with 0: [0] is the first element. [1] is the second element, etc.***
+
+#!markdown
+
+#### Change Elements of a 2D Array
+
+You can also change the value of an element.
+
+The following example will change the value of the element in the first row (0) and first column (0):
+
+#!csharp
+
+//Example; 
+int[,] numbers = { {1, 4, 2}, {3, 6, 8} };
+numbers[0, 0] = 5;  // Change value to 5
+Console.WriteLine(numbers[0, 0]); // Outputs 5 instead of 1
+
+#!markdown
+
+#### Loop Through a 2D Array
+You can easily loop through the elements of a two-dimensional array with a foreach loop:
+
+#!csharp
+
+//Example
+int[,] numbers = { {1, 4, 2}, {3, 6, 8} };
+
+foreach (int i in numbers)
+{
+  Console.WriteLine(i);
+} 
+
+#!markdown
+
+You can also use a for loop. For multidimensional arrays, you need one loop for each of the array's dimensions.
+
+Also note that we have to use GetLength() instead of Length to specify how many times the loop should run:
+
+#!csharp
+
+//Example
+int[,] numbers = { {1, 4, 2}, {3, 6, 8} };
+
+for (int i = 0; i < numbers.GetLength(0); i++) 
+{ 
+  for (int j = 0; j < numbers.GetLength(1); j++) 
+  { 
+    Console.WriteLine(numbers[i, j]); 
+  } 
+}  

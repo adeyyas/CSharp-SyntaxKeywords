@@ -2,17 +2,17 @@
 
 {"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"languageName":"csharp","name":"csharp"}]}}
 
-#!markdown
+#!kramdown
 
 # C# SYNTAX METHODS
 
-#!markdown
+#!kramdown
 
 C# is case-sensitive: "MyClass" and "myclass" has different meaning.		
 
 <span style="color:cyan">Note: Every C# statement ends with a semicolon ;</span>
 
-#!markdown
+#!kramdown
 
 ```c#
 "Console.Writeline()"
@@ -27,7 +27,7 @@ Console.WriteLine("Hello Word");
 Console.Write("Hello");
 Console.Write("World!");
 
-#!markdown
+#!kramdown
 
 ```c#
 //Comment
@@ -40,12 +40,12 @@ Any text between // and the end of the line is ignored by C# (will not be execut
 ```
 Multi-line comments start with /* and ends with */
 
-#!markdown
+#!kramdown
 
 #### C# VARIABLES
 Variables are containers for storing data values.
 
-#!markdown
+#!kramdown
 
 ```c# integer
 int myNum = 10;
@@ -89,13 +89,13 @@ string greeting = "Hello World";
 The ***string*** data type is used to store a sequence of characters (text). String values must be surrounded by double quotes:	
 Memory Size: 2 bytes per character		
 
-#!markdown
+#!kramdown
 
 #### C# TYPE CASTING
 Type casting is when you assign a value of one data type to another type.
 In C#, there are two types of casting:	
 
-#!markdown
+#!kramdown
 
 "***Implicit Casting*** (automatically) - converting a smaller type to a larger type size
 char -> int -> long -> float -> double"	
@@ -109,7 +109,7 @@ double myDouble = myInt;       // Automatic casting: int to double
 Console.WriteLine(myInt);      // Outputs 9
 Console.WriteLine(myDouble);   // Outputs 9"	
 
-#!markdown
+#!kramdown
 
 "***Explicit Casting*** (manually) - converting a larger type to a smaller size type
 ```c#
@@ -123,7 +123,7 @@ int myInt = (int) myDouble;    // Manual casting: double to int
 Console.WriteLine(myDouble);   // Outputs 9.78
 Console.WriteLine(myInt);      // Outputs 9
 
-#!markdown
+#!kramdown
 
 Type casting is when you assign a value of one data type to another type.
 It is also possible to convert data types explicitly by using built-in methods, such as Convert.ToBoolean, Convert.ToDouble, Convert.ToString, Convert.ToInt32 (int) and Convert.ToInt64 (long):
@@ -142,7 +142,7 @@ Console.WriteLine(myInt.GetType());
 Console.WriteLine(myDouble.GetType());
 Console.WriteLine(myBool.GetType());
 
-#!markdown
+#!kramdown
 
 #### C# Operators
 C# provides a number of operators. Many of them are supported by the built-in types and allow you to perform basic operations with values of those types
@@ -179,12 +179,12 @@ C# provides a number of operators. Many of them are supported by the built-in ty
 // x < 5 || x < 4;   // "||" Logical OR: Checks if one or both of two conditions are true
 // !(x < 5 && x < 10); // "!" Logical NOT: Inverts the value of a Boolean expression0
 
-#!markdown
+#!kramdown
 
 #### C# Math								
 Provides constants and static pulse for trigonometric, logarithmic and other common gears.
 
-#!markdown
+#!kramdown
 
 Math.Max(x,y);
 
@@ -202,7 +202,7 @@ int max = Math.Max(x, y);
 // Print the maximum value to the console
 Console.WriteLine(max); //output to 10.
 
-#!markdown
+#!kramdown
 
 Math.Min(x,y);
 
@@ -220,7 +220,7 @@ int min = Math.Min(x, y);
 // Print the minimum value to the console
 Console.WriteLine(min); //output to 5.
 
-#!markdown
+#!kramdown
 
 Math.Sqrt(x);
 
@@ -235,7 +235,7 @@ double squareroot=Math.Sqrt(x);
 //Print the square root of x
 Console.WriteLine(squareroot); //output to 8.
 
-#!markdown
+#!kramdown
 
 Math.Abs(x);
 
@@ -248,7 +248,7 @@ double x = -4.7;
 
         Console.WriteLine("The absolute value of {0} is {1}", x, absoluteValue); //-4.7 output to 4.7
 
-#!markdown
+#!kramdown
 
 Math.Round();
 
@@ -259,13 +259,13 @@ Math.Round() rounds a number to the nearest whole number:
 double number = 9.99;
         Console.WriteLine(Math.Round(number)); //output to 10
 
-#!markdown
+#!kramdown
 
 #### C# Strings
 
 In C#, strings are represented by the string data type. Strings in C# are immutable, which means that once a string object is created, its value cannot be changed. However, you can create a new string based on an existing string by performing operations on it.
 
-#!markdown
+#!kramdown
 
 String;
 Create a variable of type string and assign it a value
@@ -275,7 +275,7 @@ Create a variable of type string and assign it a value
 string x="cSharpIsFun";
 Console.WriteLine(x); //output to cSharpIsFun
 
-#!markdown
+#!kramdown
 
 Length;
 the length of a string can be found with the Length property.
@@ -285,7 +285,7 @@ the length of a string can be found with the Length property.
 string txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 Console.WriteLine("The length of the txt string is: " + txt.Length); //output to 26 
 
-#!markdown
+#!kramdown
 
 ToUpper(); returns a copy of the string converted to uppercase or lowercase:
 
@@ -294,7 +294,7 @@ ToUpper(); returns a copy of the string converted to uppercase or lowercase:
 string txt = "Hello World";
 Console.WriteLine(txt.ToUpper());  // Outputs "HELLO WORLD"
 
-#!markdown
+#!kramdown
 
 ToLower(); returns a copy of the string converted to uppercase or lowercase:
 
@@ -303,7 +303,7 @@ ToLower(); returns a copy of the string converted to uppercase or lowercase:
 string txt = "Hello World"; 
 Console.WriteLine(txt.ToLower());// Outputs "hello world"
 
-#!markdown
+#!kramdown
 
 (+)operator; 
 The + operator can be used between strings to combine them			
@@ -322,7 +322,7 @@ string y = "20";
 string z = x + y;  // z will be 1020 (a string)
 Console.WriteLine(z)
 
-#!markdown
+#!kramdown
 
 string.Concat();
 
@@ -334,7 +334,7 @@ string firstName ="hello", lastName="world";
 string name = string.Concat(firstName, lastName);
 Console.WriteLine(name); //output to helloworld
 
-#!markdown
+#!kramdown
 
 String Interpolation; 
 string interpolation, which substitutes values of variables into placeholders in a string.
@@ -350,7 +350,7 @@ string lastName = "Doe";
 string name = $"My full name is: {firstName} {lastName}";
 Console.WriteLine(name); //My full name is: John Doe
 
-#!markdown
+#!kramdown
 
 Access Strings; 
 can access the characters in a string by referring to its index number inside square brackets []			
@@ -361,7 +361,7 @@ string myString = "Hello";
 Console.WriteLine(myString[0]);
   // Outputs "H"
 
-#!markdown
+#!kramdown
 
  IndexOf();		
 can also find the index position of a specific character in a string, by using the IndexOf()
@@ -372,7 +372,7 @@ string myString = "Hello";
 Console.WriteLine(myString.IndexOf("e"));  
 // Outputs "1"
 
-#!markdown
+#!kramdown
 
 Substring(); 
 which extracts the characters from a string, starting from the specified character position/index, and returns a new string. This method is often used together with IndexOf() to get the specific character position
@@ -383,11 +383,11 @@ string str = "Hello World"; // declare a string variable and assign it the value
 string substr = str.Substring(0, 5); // extract the substring that starts at index 0 and is 5 characters long
 Console.WriteLine(substr); // print the extracted substring to the console
 
-#!markdown
+#!kramdown
 
 #### C# Special Characters
 
-#!markdown
+#!kramdown
 
 ```c#
 '		\'			Single quote	
@@ -402,14 +402,14 @@ Console.WriteLine(substr); // print the extracted substring to the console
 
 ```
 
-#!markdown
+#!kramdown
 
 #### C# Booleans 
 
  C# has a bool data type, which can take the values true or false.
  
 
-#!markdown
+#!kramdown
 
 A Boolean expression returns a boolean value: True or False, by comparing values/variables.
 
@@ -426,12 +426,12 @@ int y = 9;
 Console.WriteLine(x > y); // returns True, because 10 is higher than 9
 //output to true
 
-#!markdown
+#!kramdown
 
 #### C# Conditions and If Statements 
 ###### IF/ELSE/ELSE IF/ TERNARY
 
-#!markdown
+#!kramdown
 
 C# supports the usual logical conditions from mathematics:
 
@@ -459,7 +459,7 @@ C# has the following conditional statements:
 
 -Use switch to specify many alternative blocks of code to be executed
 
-#!markdown
+#!kramdown
 
 ***If - Else If - Else Example;***
 
@@ -480,13 +480,13 @@ else
 }
 // Outputs "Good evening."
 
-#!markdown
+#!kramdown
 
 ***Short Hand If...Else (Ternary Operator)***
 
 There is also a short-hand if else, which is known as the ternary operator because it consists of three operands. It can be used to replace multiple lines of code with a single line. It is often used to replace simple if else statements:
 
-#!markdown
+#!kramdown
 
 variable = (condition) ? expressionTrue :  expressionFalse;
 
@@ -496,13 +496,13 @@ int time = 20;
 string result = (time < 18) ? "Good day." : "Good evening.";
 Console.WriteLine(result);
 
-#!markdown
+#!kramdown
 
 #### C# Switch Statements
 
 Use the switch statement to select one of many code blocks to be executed.
 
-#!markdown
+#!kramdown
 
 This is how it works:
 
@@ -544,7 +544,7 @@ switch (day)
 }
 // Outputs "Thursday" (day 4)
 
-#!markdown
+#!kramdown
 
 ***The Break Keyword***
 
@@ -552,7 +552,7 @@ When C# reaches a break keyword, it breaks out of the switch block.
 
 This will stop the execution of more code and case testing inside the block.
 
-#!markdown
+#!kramdown
 
 ***The Default Keyword***
 
@@ -576,13 +576,13 @@ switch (day)
 }
 // Outputs "Looking forward to the Weekend."
 
-#!markdown
+#!kramdown
 
 #### C# While Loop 
 
 The while loop loops through a block of code as long as a specified condition is True
 
-#!markdown
+#!kramdown
 
 ```c#
 while (condition) 
@@ -591,7 +591,7 @@ while (condition)
 }
 ```
 
-#!markdown
+#!kramdown
 
 In the example below, the code in the loop will run, over and over again, as long as a variable (i) is less than 5:
 
@@ -604,16 +604,16 @@ while (i < 5)
   i++;
 }
 
-#!markdown
+#!kramdown
 
 ***Note: Do not forget to increase the variable used in the condition, otherwise the loop will never end!***
 
-#!markdown
+#!kramdown
 
 ##### C# The Do/While Loop
 The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
 
-#!markdown
+#!kramdown
 
 Syntax;
 ```c#
@@ -635,12 +635,12 @@ do
 }
 while (i < 5);
 
-#!markdown
+#!kramdown
 
 #### C# For Loop 
 When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop
 
-#!markdown
+#!kramdown
 
 Syntax;
 ```c#
@@ -656,7 +656,7 @@ for (int i = 1; i <= 10; i++) {
   Console.WriteLine(i);
 } //outputs to 1,2,3...9,10
 
-#!markdown
+#!kramdown
 
 ##### ***Nested Loops***
 It is also possible to place a loop inside another loop. This is called a nested loop.
@@ -678,13 +678,13 @@ for (int i = 1; i <= 2; ++i)
   }
 }
 
-#!markdown
+#!kramdown
 
 #### C# Foreach Loop 
 
 There is also a foreach loop, which is used exclusively to loop through elements in an array
 
-#!markdown
+#!kramdown
 
 Syntax; 
 ```c#
@@ -703,7 +703,7 @@ foreach (string i in cars)
   Console.WriteLine(i);
 }
 
-#!markdown
+#!kramdown
 
 #### C# Break and Continue
 
@@ -722,7 +722,7 @@ for (int i = 0; i < 10; i++)
   Console.WriteLine(i);
 } //for output 10 but break outputed to 4 
 
-#!markdown
+#!kramdown
 
 ***Continue***
 
@@ -740,7 +740,7 @@ for (int i = 0; i < 10; i++)
   Console.WriteLine(i);
 }
 
-#!markdown
+#!kramdown
 
 ***Break and Continue in While Loop***
 
@@ -775,7 +775,7 @@ while (i < 10)
   i++;
 }
 
-#!markdown
+#!kramdown
 
 #### C# Arrays
 Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
@@ -795,11 +795,11 @@ Console.WriteLine(cars[1]);
 int[] myNum = {10, 20, 30, 40};
 Console.WriteLine(myNum[3]);
 
-#!markdown
+#!kramdown
 
 ***Note: Array indexes start with 0: [0] is the first element. [1] is the second element, etc.***
 
-#!markdown
+#!kramdown
 
 ##### Change an Array Element
 To change the value of a specific element, refer to the index number:
@@ -811,7 +811,7 @@ cars[0] = "Opel";
 Console.WriteLine(cars[0]);
 // Now outputs Opel instead of Volvo
 
-#!markdown
+#!kramdown
 
 ##### Array Length
 To find out how many elements an array has, use the Length property:
@@ -822,7 +822,7 @@ string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
 Console.WriteLine(cars.Length);
 // Outputs 4
 
-#!markdown
+#!kramdown
 
 #### C# Loop Through Arrays
 
@@ -838,7 +838,7 @@ for (int i = 0; i < cars.Length; i++)
   Console.WriteLine(cars[i]);
 }
 
-#!markdown
+#!kramdown
 
 ##### The Foreach Loop
 There is also a foreach loop, which is used exclusively to loop through elements in an array:
@@ -860,13 +860,13 @@ foreach (string i in cars)
   Console.WriteLine(i);
 }
 
-#!markdown
+#!kramdown
 
 The example above can be read like this: for each string element (called i - as in index) in cars, print out the value of i.
 
 If you compare the for loop and foreach loop, you will see that the foreach method is easier to write, it does not require a counter (using the Length property), and it is more readable.
 
-#!markdown
+#!kramdown
 
 #### C# Sort Arrays
 
@@ -892,7 +892,7 @@ foreach (int i in myNumbers)
   Console.WriteLine(i);
 }
 
-#!markdown
+#!kramdown
 
 #### System.Linq Namespace
 Other useful array methods, such as Min, Max, and Sum, can be found in the System.Linq namespace
@@ -904,7 +904,7 @@ Other useful array methods, such as Min, Max, and Sum, can be found in the Syste
       Console.WriteLine(myNumbers.Min());  // returns the smallest value
       Console.WriteLine(myNumbers.Sum());  // returns the sum of elements
 
-#!markdown
+#!kramdown
 
 #### C# Multidimensional Arrays
 
@@ -915,7 +915,7 @@ A multidimensional array is basically an array of arrays.
 
 Arrays can have any number of dimensions. The most common are two-dimensional arrays (2D).
 
-#!markdown
+#!kramdown
 
 ##### Two-Dimensional Arrays
 
@@ -925,19 +925,19 @@ To create a 2D array, add each array within its own set of curly braces, and ins
 int[,] numbers = { {1, 4, 2}, {3, 6, 8} };
 ```
 
-#!markdown
+#!kramdown
 
 ***Good to know: The single comma [,] specifies that the array is two-dimensional. A three-dimensional array would have two commas: int[,,].***
 
-#!markdown
+#!kramdown
 
 numbers is now an array with two arrays as its elements. The first array element contains three elements: 1, 4 and 2, while the second array element contains 3, 6 and 8. To visualize it, think of the array as a table with rows and columns:
 
-#!markdown
+#!kramdown
 
 ![Alt text](https://www.w3schools.com/c/col-row.png)
 
-#!markdown
+#!kramdown
 
 #### Access Elements of a 2D Array
 To access an element of a two-dimensional array, you must specify two indexes: one for the array, and one for the element inside that array. Or better yet, with the table visualization in mind; one for the row and one for the column (see example below).
@@ -950,11 +950,11 @@ This statement accesses the value of the element in the first row (0) and third 
 int[,] numbers = { {1, 4, 2}, {3, 6, 8} };
 Console.WriteLine(numbers[0, 2]);  // Outputs 2
 
-#!markdown
+#!kramdown
 
 ***Remember that: Array indexes start with 0: [0] is the first element. [1] is the second element, etc.***
 
-#!markdown
+#!kramdown
 
 #### Change Elements of a 2D Array
 
@@ -969,7 +969,7 @@ int[,] numbers = { {1, 4, 2}, {3, 6, 8} };
 numbers[0, 0] = 5;  // Change value to 5
 Console.WriteLine(numbers[0, 0]); // Outputs 5 instead of 1
 
-#!markdown
+#!kramdown
 
 #### Loop Through a 2D Array
 You can easily loop through the elements of a two-dimensional array with a foreach loop:
@@ -984,7 +984,7 @@ foreach (int i in numbers)
   Console.WriteLine(i);
 } 
 
-#!markdown
+#!kramdown
 
 You can also use a for loop. For multidimensional arrays, you need one loop for each of the array's dimensions.
 
@@ -1003,7 +1003,7 @@ for (int i = 0; i < numbers.GetLength(0); i++)
   } 
 }  
 
-#!markdown
+#!kramdown
 
 ### C# METHODS
 
@@ -1015,7 +1015,7 @@ Methods are used to perform certain actions, and they are also known as function
 
 Why use methods? To reuse code: define the code once, and use it many times.
 
-#!markdown
+#!kramdown
 
 #### Create a Method
 A method is defined with the name of the method, followed by parentheses (). C# provides some pre-defined methods, which you already are familiar with, such as Main(), but you can also create your own methods to perform certain actions
@@ -1031,7 +1031,7 @@ class Program
 }
 ```
 
-#!markdown
+#!kramdown
 
 Example Explained
 
@@ -1043,11 +1043,11 @@ Example Explained
     
     **Note** : In C#, it is good practice to start with an uppercase letter when naming methods, as it makes the code easier to read.
 
-#!markdown
+#!kramdown
 
 ***Note: In C#, it is good practice to start with an uppercase letter when naming methods, as it makes the code easier to read.***
 
-#!markdown
+#!kramdown
 
 #### Call a Method
 To call (execute) a method, write the method's name followed by two parentheses () and a semicolon;
@@ -1069,6 +1069,6 @@ static void Main(string[] args)
 }
 // Outputs "I just got executed!"
 
-#!markdown
+#!kramdown
 
 ***A method can be called multiple times.***
